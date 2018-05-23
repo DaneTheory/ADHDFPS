@@ -3,7 +3,7 @@ import 'babel-polyfill'
 import './styles/index.scss'
 
 
-import ADHDFPS from './scripts'
+import ADHDFPS from './js'
 
 
 (() =>

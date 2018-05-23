@@ -1,0 +1,100 @@
+@import 'fonts';
+
+// $primary__font: 'phantasm';
+// $secondary__font: 'league_spartan';
+
+
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Helvetica';
+}
+
+#pauseScreen--wrapper {
+  height: 100vh;
+  background-color: rgb(67, 97, 106);
+  background-image:  url('../public/images/pause_screen/fight.gif');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+
+}
+
+#instructions--wrapper {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto auto;
+
+    h2 {
+      position: absolute;
+      bottom: 0.5em;
+      font-size: 2.85em;
+      margin-left: 8em;
+      border: 0.15em solid rgb(255, 255, 255);
+      padding: 1em;
+    }
+}
+
+
+.title {
+  font-family: 'phantasm';
+  font-size: 10vw;
+  margin-bottom: 0;
+  line-height: 0.95em;
+  position: relative;
+}
+
+.slogan {
+  font-family: 'league_spartan';
+  font-size: 1.5vw;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.controls--wrapper {
+  font-family: 'league_spartan';
+  position: absolute;
+  width: 60%;
+  margin: auto;
+  left: 0;
+  right: 0;
+
+    h3 {
+      font-size: 3vw;
+      margin-bottom: 0;
+      margin-top: 0em;
+      border-bottom: 1px solid rgba(255, 255, 255, 1);
+      display: inline-block;
+    }
+
+    ul {
+      margin-top: 2em;
+      list-style-type: none;
+      display: flex;
+      font-size: 1em;
+      padding: 0;
+      justify-content: center;
+
+        li {
+          padding-left: 1em;
+          padding-right: 1em;
+
+            h4 {
+
+            }
+        }
+    }
+}

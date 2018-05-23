@@ -95,7 +95,7 @@
     "webpack-hot-middleware": "2.22.1",
     "webpack-md5-hash": "0.0.6"
   },
-  "proxy": "http://127.0.0.1:8080",
+  "proxy": "http://127.0.0.1:8081",
   "babel": {
     "env": {
       "development": {

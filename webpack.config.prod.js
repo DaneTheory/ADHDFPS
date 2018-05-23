@@ -61,16 +61,16 @@ export default {
 
     new CopyWebpackPlugin([
         {
-          from:'src/public',
-          to:'public'
+          from:'src/images',
+          to:'images'
         },
         {
-          from:'src/scripts',
-          to:'scripts'
+          from:'src/audio',
+          to:'audio'
         },
         {
-          from:'src/styles',
-          to:'styles'
+          from:'src/fonts',
+          to:'fonts'
         }
     ]),
 

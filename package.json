@@ -15,7 +15,7 @@
     "remove-dist": "rimraf ./dist",
     "build:local": "babel-node tools/build.js && npm run open:dist",
     "build": "babel-node tools/build.js && npm run open:prod",
-    "prod": "pm2 start --interpreter babel-node tools/prodServer.js --name adhdfps",
+    "prod": "babel-node tools/build.js && pm2 start --interpreter babel-node tools/prodServer.js --name adhdfps",
     "test": "jest",
     "test:CI": "babel-node tools/testCi.js",
     "test:watch": "jest --watch"
@@ -95,7 +95,6 @@
     "webpack-hot-middleware": "2.22.1",
     "webpack-md5-hash": "0.0.6"
   },
-  "proxy": "http://127.0.0.1:3002",
   "babel": {
     "env": {
       "development": {

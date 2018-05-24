@@ -1,40 +1,17 @@
-// This file configures a web server for testing the production build
-// on your local machine.
-
-// import browserSync from 'browser-sync';
-// import historyApiFallback from 'connect-history-api-fallback';
+/* eslint-disable no-console */
 import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
 import { chalkProcessing } from './chalkConfig';
 
-/* eslint-disable no-console */
+const port = process.env.PORT || 8222
 
-console.log(chalkProcessing('Opening production build...'));
-
-// Run Browsersync
-// browserSync({
-//   port: 8080,
-//   ui: {
-//     port: 8081
-//   },
-//   server: {
-//     baseDir: 'dist'
-//   },
-//
-//   files: [
-//     'src/*.html'
-//   ],
-//
-//   middleware: [historyApiFallback()]
-// });
+console.log(chalkProcessing(`Opening production build on port: ${port}`));
 
 const app = express();
 
 app.use(express.static(path.join(__dirname, '..', 'dist')));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'));
+app.listen(port, () => {
+  console.log(`ADHDFPS App Server running on port: ${port} in production mode!`)
 });
-
-app.listen(process.env.PORT || 3002);
